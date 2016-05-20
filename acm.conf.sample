@@ -1,0 +1,25 @@
+%Conf = (
+    eventsfile_path => '/opt/uen/etc/acm_events.pl',
+    headerfile_path => '/opt/uen/etc/header.txt',
+    local_namedconf_path => '/opt/uen/etc/named.conf.current',
+    remote_namedconf_path => '/etc/bind/named.conf',
+    syslog_path => '/var/log/local7.notice',
+    acmlog_path => '/opt/uen/logs/acm.log',
+    loglevel => 'NOTICE',
+    bloxcreds => {
+        master => "******.uen.org",
+        username => "*******",
+        password => '*******'
+    },
+    sshparams => {
+        user => '**********',
+        ssh_cmd => '/opt/openssh/bin/ssh',  ## non-standard install location
+        timeout => 5,
+        ctl_dir => '/tmp',
+        strict_mode => 0,
+        master_opts => [
+            '-q',
+            -o => 'UserKnownHostsFile=/dev/null' ,
+            -o => 'StrictHostKeyChecking=no' ]
+    }
+);

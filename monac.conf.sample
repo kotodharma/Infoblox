@@ -1,0 +1,21 @@
+%Conf = (
+    bloxcreds => {
+        master => "******.uen.org",
+        username => "*******",
+        password => '*******'
+    },
+    statfields => [
+        'status',    ## this comes from rndc as "server", but "status" is better for display
+        'number of zones',
+        'xfers running',
+        'xfers deferred',
+        'soa queries in progress',
+        'query logging',
+        'recursive clients',
+        'tcp clients'
+    ],
+    statusfile_path => '/export/home/nsmaint/status.out',
+    display_autorefresh => 60, ## seconds
+    query_interval => 30, ## seconds
+    loglevel => 'NOTICE'
+);
